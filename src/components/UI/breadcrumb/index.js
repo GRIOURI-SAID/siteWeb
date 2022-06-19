@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styles from "./Breadcrumb.module.scss";
-import bgImg from "../../../assets/images/bg/5.jpg";
+
 
 const Breadcrumb = ({ title }) => {
   return (
     <div
       className={styles.prBreadcrumbArea}
-      style={{ backgroundImage: `url(${bgImg})` }}
+
     >
       <div className="container">
         <div className="row">

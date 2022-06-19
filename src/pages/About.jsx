@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import MetaTags from "react-meta-tags";
 import LayoutOne from "../layouts";
 import Breadcrumb from "../components/UI/breadcrumb";
+import AboutContentOne from "../containers/about-content/AboutContent";
 
 
 
@@ -18,10 +19,9 @@ const About = () => {
         />
       </MetaTags>
       <LayoutOne>
-        {/* breadcrumb */}
-        <Breadcrumb title="About Us" />
-
-
+         <AboutContentOne />
+           
+        
 
 
       </LayoutOne>

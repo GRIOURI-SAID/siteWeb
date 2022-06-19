@@ -6,7 +6,7 @@ const  Hero  =() =>{
   return (
       <div className='container'>
           <div className={style.hero}>
-              <img src={hero} alt="" className=' class="img-fluid"'/>
+              <img src={hero} alt="" className="img-fluid"/>
           </div>
       </div>
   )
