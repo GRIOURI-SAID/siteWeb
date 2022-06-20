@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import data from "../../data/users/users.json"
 import styles from "./UserContent.module.scss"
+import { withRouter } from 'react-router-dom';
 const UserContent =() => {
   return (
      <div className={styles.background}>
@@ -67,4 +68,4 @@ const UserContent =() => {
   )
 }
 
-export default UserContent
+export default withRouter(UserContent)

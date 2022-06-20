@@ -4,3 +4,32 @@
 }
 
 
+
+.flex{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  height: 70vh;
+}
+
+.btn{
+    list-style: none;
+
+    li{
+        button{
+         
+            border-color:#ba8c5d ;
+            padding: 20px 33px;
+            border: none;
+            width: 232px;
+      
+            
+            font-weight: bold;
+            background: #e8bf96;
+        }
+
+    }
+}
+

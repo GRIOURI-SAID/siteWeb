@@ -24,6 +24,7 @@ function App() {
           component={HomeOne}
         />
         <Route
+
           path={`${process.env.PUBLIC_URL + "/admin"}`}
           component={Admin}
         />
