@@ -12,7 +12,7 @@ const About = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Voopo | About</title>
+        <title> About</title>
         <meta
           name="description"
           content=""

@@ -1,0 +1,54 @@
+.background{
+    background-color: white !important;
+}
+
+.image{
+    width: 150px;
+    height: 150px;
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+
+    }
+
+}
+
+.list {
+    list-style: none;
+}
+
+.btn{
+    border: none;
+    padding: 10px 25px;
+    /* color: brown; */
+    background: #ba8c5d;
+}
+
+.active {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 50px;
+}
+
+.inactive {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 50px;
+}
+
+
+
+.title{
+    position: relative;
+}

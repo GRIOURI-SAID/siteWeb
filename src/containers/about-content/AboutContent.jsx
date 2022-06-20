@@ -2,7 +2,10 @@ import React from "react";
 import styles from "./AboutContentOne.module.scss";
 import aboutImage from "./../../assets/images/about.png"
 
-import { AiOutlinePlus } from "react-icons";
+
+import { Link } from "react-router-dom";
+
+import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io";
 const AboutContentOne = () => {
   return (
   
@@ -34,7 +37,21 @@ const AboutContentOne = () => {
               <p>Exemple@gmail.com</p>
               <p>07265265365</p>
 
-              <p className="text-right">socail</p>
+              <p className="text-right">
+                <ul className={styles.socialIcon}>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + "#/"}>
+                      <IoLogoFacebook />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + "#/"}>
+                      <IoLogoInstagram />
+                    </Link>
+                  </li>
+                  
+                </ul>
+              </p>
             </div>
           </div>
         </div>

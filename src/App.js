@@ -9,6 +9,8 @@ import HomeOne from "./pages/Home";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
+import Admin from "./pages/Admin";
+import User from "./pages/User";
 
 
 function App() {
@@ -22,8 +24,8 @@ function App() {
           component={HomeOne}
         />
         <Route
-          path={`${process.env.PUBLIC_URL + "/home-one"}`}
-          component={HomeOne}
+          path={`${process.env.PUBLIC_URL + "/admin"}`}
+          component={Admin}
         />
 
         <Route
@@ -36,6 +38,10 @@ function App() {
           component={Contact}
         />
 
+        <Route
+          path={`${process.env.PUBLIC_URL + "/users"}`}
+          component={User}
+        />
         <Route
           path={process.env.PUBLIC_URL + "/not-found"}
           component={NotFound}

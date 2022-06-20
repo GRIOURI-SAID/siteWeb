@@ -46,6 +46,10 @@ const ContactForm = () => {
 
               </div>
 
+              <div className={styles.btn}>
+                <button >Submit</button>
+              </div>
+
 
 
             </form>

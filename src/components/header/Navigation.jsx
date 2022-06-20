@@ -21,7 +21,7 @@ const Navigation = () => {
         </li>
 
         <li>
-          <Link to={process.env.PUBLIC_URL + "/course"}>Course</Link>
+          <Link to={process.env.PUBLIC_URL + "/admin"}>Course</Link>
         </li>
       </ul>
     </nav>
