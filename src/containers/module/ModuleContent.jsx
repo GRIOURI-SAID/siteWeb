@@ -1,8 +1,18 @@
 import React from 'react'
 import ModuleContent from '../../components/module-content/Module-Content'
 import styles from "./moduleContent.module.scss"
+import data from "../../data/module/module.json"
+import {
 
-const  ModuleContents =() =>{
+    useParams
+} from "react-router-dom";
+
+const ModuleContents = () => {
+    let { id } = useParams();
+    if (id == undefined)
+      id ="1"
+    
+    const data2 = data.filter(module => module?.id === id.toString())
     return (
       <>
             <div className={styles.scroll}>
@@ -15,7 +25,18 @@ const  ModuleContents =() =>{
 
             <div className={`container text-center ${styles.theore}`}>
                 <h3>Theorie</h3>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam reiciendis, itaque ipsum nihil exercitationem repellat odit laboriosam. Ad, numquam molestias maiores dolorum libero tenetur at facilis necessitatibus odit modi rem.
+
+                {data2?.map(module =>
+                    <div className='container mt-5 text-center'>
+                        
+
+                        <div className='content'>
+                            <p >{module.content}</p>
+                        </div>
+                    </div>
+
+                )}
+                
             </div>
 
             <div className={` container ${styles.vedio}`}></div>

@@ -11,8 +11,8 @@ const  ModuleContent =()  =>{
                   <div className={style.card} >
                       <div className="card-body text-center">
                           
-                          <p class="card-text mb-4">{module.content}</p>
-                          <Link to={`/module/${module.id}`}  className={style.btn}>{module.type}</Link>
+                          <p class="card-text mb-4">{module.content.substring(0, 60)} </p>
+                          <Link to={`/myaccount/${module.id}`}  className={style.btn}>{module.type}</Link>
                           
                       </div>
                   </div>

@@ -37,8 +37,8 @@ function App() {
         />
 
         <Route
-          path={`${process.env.PUBLIC_URL + "/module/:id"}`}
-          component={DetailsModule}
+          path={`${process.env.PUBLIC_URL + "/myaccount/:id"}`}
+          component={Account}
         />
 
 
