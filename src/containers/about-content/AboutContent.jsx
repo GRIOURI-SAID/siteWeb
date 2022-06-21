@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./AboutContentOne.module.scss";
 import aboutImage from "./../../assets/images/about.png"
 
@@ -7,6 +7,11 @@ import { Link } from "react-router-dom";
 
 import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io";
 const AboutContentOne = () => {
+  const [show , setShow] = useState(true)
+
+  const handlshow = () => setShow(true)
+  const handlnoshow = () => setShow(false)
+
   return (
   
     <div className="top">
@@ -61,25 +66,27 @@ const AboutContentOne = () => {
         <div className="container">
         <h3 className="text-center">Name</h3>
         <div className="infobutton">
-          <button className={styles.btn}>+  exemple</button>
+            <button onClick={handlshow} className={styles.btn}>+  exemple</button>
           <br />
-          <button className={styles.btn}>- exemple</button>
+            <button onClick={handlnoshow} className={styles.btn}>- exemple</button>
         </div>
 
           <div className={styles.contentinfo}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, ad? A porro ea debitis at deserunt unde, placeat facere sit alias, magni eum illo velit officiis sed voluptatibus! Quaerat, accusamus?
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, ad? A porro ea debitis at deserunt unde, placeat facere sit alias, magni eum illo velit officiis sed voluptatibus! Quaerat, accusamus?
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, ad? A porro ea debitis at deserunt unde, placeat facere sit alias, magni eum illo velit officiis sed voluptatibus! Quaerat, accusamus?
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, ad? A porro ea debitis at deserunt unde, placeat facere sit alias, magni eum illo velit officiis sed voluptatibus! Quaerat, accusamus?
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, ad? A porro ea debitis at deserunt unde, placeat facere sit alias, magni eum illo velit officiis sed voluptatibus! Quaerat, accusamus?
+            {show && 
+              <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, ad? A porro ea debitis at deserunt unde, placeat facere sit alias, magni eum illo velit officiis sed voluptatibus! Quaerat, accusamus?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, ad? A porro ea debitis at deserunt unde, placeat facere sit alias, magni eum illo velit officiis sed voluptatibus! Quaerat, accusamus?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, ad? A porro ea debitis at deserunt unde, placeat facere sit alias, magni eum illo velit officiis sed voluptatibus! Quaerat, accusamus?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, ad? A porro ea debitis at deserunt unde, placeat facere sit alias, magni eum illo velit officiis sed voluptatibus! Quaerat, accusamus?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, ad? A porro ea debitis at deserunt unde, placeat facere sit alias, magni eum illo velit officiis sed voluptatibus! Quaerat, accusamus?
 
-          <br />
+            <br />
 
-          <br />
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam ipsam ducimus rem nisi, unde nostrum, explicabo eligendi, quae suscipit impedit tenetur laboriosam laudantium quibusdam eius necessitatibus assumenda quas incidunt quo.
+            <br />
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam ipsam ducimus rem nisi, unde nostrum, explicabo eligendi, quae suscipit impedit tenetur laboriosam laudantium quibusdam eius necessitatibus assumenda quas incidunt quo.
 
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit :</p>
-         
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit :</p>
+
             <div className="row">
               <div className="col-md-4">
                 <ul className={styles.list}>
@@ -95,8 +102,24 @@ const AboutContentOne = () => {
                   <li>- exemple</li>
                 </ul>
               </div>
-            
+
             </div>
+            
+              </div>
+            }
+
+
+            {!show && 
+              <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore ex quae ad reiciendis est ut ipsa molestias, quidem cum, id sint excepturi repellendus praesentium mollitia blanditiis incidunt non placeat!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore ex quae ad reiciendis est ut ipsa molestias, quidem cum, id sint excepturi repellendus praesentium mollitia blanditiis incidunt non placeat!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore ex quae ad reiciendis est ut ipsa molestias, quidem cum, id sint excepturi repellendus praesentium mollitia blanditiis incidunt non placeat!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore ex quae ad reiciendis est ut ipsa molestias, quidem cum, id sint excepturi repellendus praesentium mollitia blanditiis incidunt non placeat!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore ex quae ad reiciendis est ut ipsa molestias, quidem cum, id sint excepturi repellendus praesentium mollitia blanditiis incidunt non placeat!
+
+               </div>
+            }
+          
         
         </div>
 

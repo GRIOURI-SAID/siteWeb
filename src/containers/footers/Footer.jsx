@@ -94,7 +94,7 @@ const Footer = ({ footerBg }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "#/"}>
+                    <Link to={process.env.PUBLIC_URL + "/myaccount"}>
                      My account
                     </Link>
                   </li>

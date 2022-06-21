@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Navigation from "../../components/header/Navigation";
 
@@ -6,9 +6,11 @@ import MobileMenu from "../../components/header/MobileMenu";
 import styles from "./Header.module.scss";
 import Logo from "../../components/header/Logo";
 import { FaUserCircle } from "react-icons/fa";
+import Modal from 'react-bootstrap/Modal'
+import Forms from "../forms/Forms";
 
 const Header = () => {
-
+  const [show, setShow] = useState(false);
 
   return (
     <header
@@ -26,7 +28,7 @@ const Header = () => {
           </div>
           <div className="col-6 col-lg-2 account">
             <ul className={styles.account}>
-              My Account <FaUserCircle />
+              <span onClick={() => setShow(true)}> My Account <FaUserCircle /></span>
             </ul>
 
 
@@ -35,6 +37,21 @@ const Header = () => {
         {/* Mobile Menu */}
         <MobileMenu styles={styles} />
       </div>
+
+      <Modal
+
+        show={show}
+        onHide={() => setShow(false)}
+        dialogClassName="modal-90w"
+        aria-labelledby="example-custom-modal-styling-title"
+      >
+        <Modal.Body
+          className={styles.Modal}
+        >
+          <Forms />
+
+        </Modal.Body>
+      </Modal>
     </header >
   );
 };

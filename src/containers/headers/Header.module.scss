@@ -2,7 +2,7 @@
 
 .headerArea {
     
-    height: 80px;
+    height: 61px;;
     color :black;
 
     width: auto;
@@ -410,4 +410,13 @@
 .account {
     font-size: 18px;
     margin-top: 20px;
+    span {
+        cursor: pointer;
+    }
 }
+
+
+.Modal{
+    background-color: #ffddbb;
+}
+

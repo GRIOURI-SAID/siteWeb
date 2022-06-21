@@ -11,6 +11,8 @@ import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Admin from "./pages/Admin";
 import User from "./pages/User";
+import Account from "./pages/Account";
+import DetailsModule from "./pages/DetailsModule";
 
 
 function App() {
@@ -35,6 +37,13 @@ function App() {
         />
 
         <Route
+          path={`${process.env.PUBLIC_URL + "/module/:id"}`}
+          component={DetailsModule}
+        />
+
+
+
+        <Route
           path={`${process.env.PUBLIC_URL + "/contact"}`}
           component={Contact}
         />
@@ -42,6 +51,12 @@ function App() {
         <Route
           path={`${process.env.PUBLIC_URL + "/users"}`}
           component={User}
+        />
+
+
+        <Route
+          path={`${process.env.PUBLIC_URL + "/myaccount"}`}
+          component={Account}
         />
         <Route
           path={process.env.PUBLIC_URL + "/not-found"}
