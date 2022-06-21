@@ -20,7 +20,7 @@ function UploadContent() {
               <p className={styles.title}>Uplaod naar</p>
               <div className={`row ${styles.uploadtop}`}>
                   
-                  <div className='col-md-2'>
+                  <div className='col-md-3'>
                       
                       <ul>
                           <li><input type="checkbox" /> Module 1</li>
@@ -30,7 +30,7 @@ function UploadContent() {
                       </ul>
                   </div>
 
-                  <div className='col-md-2'>
+                  <div className='col-md-3'>
                       <ul>
                           <li><input type="checkbox" /> Module 1</li>
                           <li><input type="checkbox" /> Module 2</li>

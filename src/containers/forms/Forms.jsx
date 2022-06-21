@@ -10,7 +10,7 @@ function Forms() {
       <div>
           <div className='row m-0 p-0'>
               <div className='col-md-6 m-0 p-0'>
-                  <button onClick={handlShow} className={styles.login}>Login</button>
+                  <button className={showlogin ?  "active"  : ""} onClick={handlShow} className={styles.login}>Login</button>
                   
                 </div>
               <div className='col-md-6 m-0 p-0'>
